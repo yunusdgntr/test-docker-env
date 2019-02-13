@@ -1,5 +1,4 @@
-ARG APP_IMAGE=busybox:${TAG}
-FROM $APP_IMAGE
+FROM $IMAGE
 ARG TEST="My default value"
 COPY ./yourprojectfolder /root/yourprojectfolder
 WORKDIR /root

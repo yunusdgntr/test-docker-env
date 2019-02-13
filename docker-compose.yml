@@ -8,6 +8,7 @@ services:
     environment:
      - TEST_VARIABLE=${TEST_VARIABLE}
      - TAG=${TAG}
+     - IMAGE=${IMAGE}
     tty: true    
 volumes:
   media: null

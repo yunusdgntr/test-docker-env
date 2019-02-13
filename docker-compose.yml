@@ -3,7 +3,6 @@ services:
   app:
     build:
       context: .
-    dockerfile: Dockerfile
       args:
        TAG: ${TAG}
     environment:

@@ -3,11 +3,8 @@ services:
   app:
     build:
       context: .
-      args:
-       TAG: ${TAG}
     environment:
      - TEST_VARIABLE=${TEST_VARIABLE}
-     - TAG=${TAG}
      - IMAGE=${IMAGE}
     tty: true    
 volumes:

@@ -3,8 +3,12 @@ services:
   app:
     build:
       context: .
+    dockerfile: Dockerfile
+    args:
+      TAG: ${TAG}
     environment:
      - TEST_VARIABLE=${TEST_VARIABLE}
+     - TAG=${TAG}
     tty: true    
 volumes:
   media: null

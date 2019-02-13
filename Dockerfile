@@ -1,4 +1,4 @@
-FROM $IMAGE
+FROM busybox:1.30
 ARG TEST="My default value"
 COPY ./yourprojectfolder /root/yourprojectfolder
 WORKDIR /root

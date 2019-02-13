@@ -5,7 +5,6 @@ services:
       context: .
     environment:
      - TEST_VARIABLE=${TEST_VARIABLE}
-     - IMAGE=${IMAGE}
     tty: true    
 volumes:
   media: null

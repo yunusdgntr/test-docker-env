@@ -1,5 +1,8 @@
-FROM busybox:${TAG}
-ARG TAG
-COPY ./yourprojectfolder ./yourprojectfolder
-RUN chmod +x ./yourprojectfolder/test_app.sh
-ENTRYPOINT ["./yourprojectfolder/test_app.sh", "$TEST_VARIABLE"]
+ARG APP_IMAGE=busybox:${TAG}
+FROM $APP_IMAGE
+ARG TEST="My default value"
+COPY ./yourprojectfolder /root/yourprojectfolder
+WORKDIR /root
+RUN chmod +x /root/yourprojectfolder/test_app.sh
+ENTRYPOINT ["/root/yourprojectfolder/test_app.sh", "${TEST_VARIABLE} ${TEST}"]
+CMD [ "sh", "/root/yourprojectfolder/test_app.sh", "${TAG}"]

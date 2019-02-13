@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "The value from .env is $1"
+echo "The value from .env is $TEST_VARIABLE"
